@@ -18,8 +18,8 @@ typedef struct Node {
 } Node;
 
 typedef struct queue {
-    Node *head;
-    Node *tail;
+    struct Node *head;
+    struct Node *tail;
 } queue;
 
 queue_t* qopen(void) {
@@ -42,11 +42,9 @@ void qclose(queue_t *qp) {
         return;
     }
     Node *cur = q->head;
-    Node *next = NULL;
-
+    
     while (cur != NULL) {
-        next = cur->next;
-        free(cur->val);
+        Node *next = cur->next;
         free(cur);
         cur = next;
     }
