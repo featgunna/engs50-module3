@@ -1,3 +1,6 @@
 Repository for Module 3 @ ENGS50, Fall 26
-James
+
+Queue Module: 179
+Hash Table Module: 160
+
 
